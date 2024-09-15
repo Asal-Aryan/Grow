@@ -1,0 +1,1147 @@
+@font-face{
+    font-family: "Gelasio";
+    src:url(../font/Gelasio-Medium.woff)
+}
+@keyframes Heart{
+    0%{
+        font-size: 17px;
+    }
+    25%{
+        font-size: 18px;
+    }
+    50%{
+        font-size: 19px;
+    }
+    75%{
+        font-size: 18px;
+    }
+    100%{
+        font-size: 17px;
+    }
+}
+
+
+html , body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #ebebe0;
+    z-index: -20;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.first{
+min-height: 500px;
+}
+
+.header {
+    display: flex;
+    max-width: 1440px;
+    max-height: 85px;
+    margin: 0 auto;
+    padding:  10px 30px;
+    position: relative;
+    align-items: center ;
+}
+.blue{
+    position: absolute;
+    top:0;
+    right:100px;
+    width:428px;
+    height: 402px;
+    z-index: -5;
+}
+.blue1{
+    width: 433px;
+    height: 452px;
+    position: absolute;
+    top:0;
+    right:99px;
+    z-index: -4;
+}
+
+.header > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo   {
+   padding: 0;
+   margin:auto 50px;
+}
+
+
+.header .menu{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    /* position:absolute;
+    left: 275px; */
+}
+
+.header .menu li {
+    display: inline-block;
+    margin: 0 10px 0 15px;
+    font-size: 12px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.header .menu li:hover{
+    text-decoration: underline;
+}
+
+.header .icons{
+    position: absolute;
+    right:100px;
+}
+
+
+.header .icons i{
+   padding: 10px;
+   transition: all 1s;
+}
+.header .icons i:hover{
+    color:#ffff80;
+}
+.header .icons a{
+    color: unset;
+}
+.popup{
+    display: none;
+    justify-content: end;
+    position: relative;
+}
+.popupBox{
+   position: absolute;
+   z-index: 7;
+   background-color: #f5cc92;
+   opacity: 0.97;
+   border: 3px solid rgb(214, 26, 26);
+   font-size: 16px;
+   color:  rgb(214, 26, 26);
+   font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+   box-shadow: 10px 10px 10px #000000bf;
+   right: 0;
+}
+.popupBox a{
+    font-size: 16px;
+    color:  rgb(214, 26, 26);
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+} 
+.popupBox p{
+    margin: auto;
+    padding: 23px;
+}
+.theart{
+    font-size: 16px;
+    color:rgb(214, 26, 26) ;
+}
+.giftPopup{
+    display: none;
+    align-items: start;
+}
+.giftPopupBox{
+    color: #106c2e;
+    background-color: #d3e8d5;
+    border: 3px solid #106c2e;
+    position: absolute;
+    z-index: 7;
+    opacity: 0.97;
+    font-size: 16px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 10px 10px 10px #000000bf;
+    left: 250px;
+    top: 50px;
+}
+.giftPopupBox p{
+    margin: auto;
+    padding: 23px;
+}
+/* --------------------------------search part------------------------------------- */
+.search-part{
+    position: absolute;
+    margin: auto;
+    width: 90%;
+    z-index: 10;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+    top: 42px;
+    right: 5%;
+    padding: 15px;
+    box-shadow: 0px 0px 10px #106c2e , 0px 0px 10px #106c2e inset;
+}
+.search-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 18px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color: #163626;
+    border-radius: 20px;
+    transition: all 1s;
+    border: unset;
+}
+#search{
+    background-color: unset;
+    border: unset;
+    width: 80%;
+}
+#searchBtn{
+    background-color: unset;
+    border: unset;
+}
+#searchBtn:hover{
+    transform: translate(0 , -5px)  scale(1.3);
+    color: #f5cc92;
+}
+#result-box{
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.result-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.result-part a{
+    font-family: helvetica;
+    font-size: 18px;
+    color: #163626;
+    text-decoration: none;
+}
+#search-result{
+    font-family: helvetica;
+    font-size: 18px;
+    color: #163626;
+    text-decoration: none;
+}
+.result-part i{
+    color: #51916B;
+}
+ /* ---------------------------------mobile menu---------------------------------- */
+.mobileMenu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    z-index: 50;
+    background-color: #ebebe0;
+    height: 100vh;
+    max-height: 97vh;
+    border: 15px solid #1e3527;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1;
+    /* display: none; */
+}
+
+.mobileMenu nav .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.mobileMenu nav .menu li {
+    margin: 20px 0px;
+    background-color:white;
+    color:#1e3527 ;
+    padding: 10px;
+    border-radius: 17px;
+    border: 2px solid #1e3527;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+}
+.menu a{
+    text-decoration: none;
+    color:#1e3527 ;
+}
+.mobileMenu .menu i{
+    color:#1e3527;
+    margin: auto;
+    opacity: 0.8;
+    padding: 7px;
+}
+
+.mobileMenu .menuClose {
+    background: none;
+    border: 0;
+    width: 40px;
+    font-size: 22px;
+    margin-right: auto;
+}
+.login{
+    padding: 5px;
+    border: 2px solid #1e3527;
+    border-radius: 20px;
+    transition: all 1s;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffff80;
+    color:#1e3527 ;
+}
+.login:hover{
+    background-color: #1e3527;   
+}
+.mobileMenu img{
+    align-self: center;
+    width: 74%;
+}
+/*  ----------------------------------------------------------------------------------- */
+h1{
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    font-size: 58px;
+
+    margin-bottom: 20px;
+}
+
+.grow{
+    color: #51916B;
+}
+
+
+.container1{
+    position: relative;
+}
+
+
+.firstText p{
+font-size: 15px;
+font-family: helvetica;
+margin-bottom: 20px;
+color: #163626;
+}
+.firstText{
+    margin-left: 84px;
+    position: relative;
+    z-index: 3;
+}
+.shopb{
+    background-color:#233428 ;
+    margin: 10px 0;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: all 1s;
+    text-decoration: none;
+    position: absolute;
+     
+}
+
+.shopb:hover{
+    background-color: #ffff80;
+    color:#233428  ;
+}
+
+.text2 h2{
+    text-align: center;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color:#163626 ;
+    font-size: 40px;
+    margin-bottom: 10px;
+    }
+ .text2 p{ 
+        color: #163626;
+        text-align: center;
+        font-family: helvetica;
+        font-size: 14px;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 3px solid #ffff80;
+        border-radius: 20px;
+    }
+    .items img{
+        border-radius: 20px;
+        
+    }
+    .items p{
+        color: #163626;
+        font-family: helvetica;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    .items h4{
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        color:#163626 ;
+        font-size: 22px;  
+        margin-top: 10px; 
+    }
+    .rate{
+        display: flex;
+        justify-content: space-between;
+        background-color: #c2c2a3;
+        max-height: 20px;
+        padding: 0px 5px;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5px;
+        align-items: baseline;
+        flex-direction: row-reverse;
+    }
+    .stars{
+        display: flex;
+        padding: 0;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-right: 5px;
+    }
+    .rate i{
+        font-size: 12px;
+        padding: 0px;
+        color: white;
+    }
+    .t{
+        color:white !important;
+        font-size: 12px !important;
+    margin-top: 0 !important;
+    }
+    .swiper-button-prev{
+        margin: auto;
+        color: #106c2e;
+        margin-left: -13px;
+    }
+    
+    .swiper-button-next{
+        margin: auto;
+        color: #106c2e;
+        margin-right: -13px;
+    }
+    .container3{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        align-items: start;
+        position: relative;
+    }
+    .topVector{
+        position: absolute;
+        z-index: -4;
+        rotate: 98deg;
+        top: 22px;
+        left: 0;
+        opacity: 0.1;
+        width: 27%;
+    }
+    .bottomVector{
+        position: absolute;
+        bottom: 0;
+        opacity: 0.1;
+        z-index: -4;
+        width: 21%;
+        right: 0px;
+    }
+    .leftPictureText{
+        margin-left: 60px;
+        margin-bottom: 50px;
+    }
+    .leftPictureText h3{
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        color:#163626 ;
+        font-size: 30px;   
+        font-weight: bold;
+    }
+    .leftPictureText p{
+        color: #163626;
+        font-family: helvetica;
+        font-size: 16px;   
+    }
+    .leftpicture{
+        display: flex;
+        align-self: end;
+        flex-direction: column;
+    }
+    .leftImg img{
+         width: 90%;
+    }
+    .rightPicture{
+        display: flex;
+    }
+    .rightImg img{
+        height: 90%;
+        width: 100%;
+    }
+    #fourth{
+        margin-top: 150px;
+    }
+    .shopPlants{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+    }
+    .shopPlants h2{
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        font-weight: 250;
+        line-height: 120%;
+        margin-top: 40px;
+    }
+    .shopPlants p{
+        font-size: 15px;
+        font-family: helvetica;
+        margin-bottom: 24px;
+    }
+    .shopPlantsBtn{
+        background-color:#6A7773;
+        margin: 10px 0;
+        cursor: pointer;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 20px;
+        transition: all 1s;
+        text-decoration: none;
+    }
+    
+    .shopPlantsBtn:hover{
+        background-color: #ffffcc;
+        color: #6A7773;
+    }
+    .firstPlant{
+        background-image: url(../img/cactus.png);
+        background-size: 1440px 212px;
+        min-height: 212px;
+    }
+    .secPlant{
+        background-image: url(../img/plant1\(1\).png);
+        background-size: 1440px 212px;
+        min-height: 212px;
+    }
+   .thirdPlant{
+        background-image: url(../img/plant2.png);
+        background-size: 1440px 212px;
+        min-height: 212px;
+    }
+    .text5{
+        text-align: center;
+    }
+
+    .text5 h2{
+        color: #233428;
+        font-size: 35px;
+        font-family:"Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
+
+    }
+    .text5 p{
+        color: #233428;
+        font-size: 12px;
+        font-family: helvetica;
+        font-weight: 200;
+        margin-top: -13px;
+    }
+
+    
+    .sale img{
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .sale h4{
+        color: #233428;
+        font-size: 15px;
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400px;
+        margin-top: 8px;
+    }
+
+    .sale p{
+        color: #233428;
+        opacity: 0.7;
+        font-size: 12px;
+        font-family: helvecita;
+        font-weight: 400px;
+    }
+
+    .sale h5{
+        color: #233428;
+        font-size: 12px;
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400px;
+    }
+    .swiper2{
+        margin: 50px;
+    }
+    .container6{
+        background-image: url(../img/CTA.png);
+        background-size: cover;
+        min-height: 255px;
+        width: 100%; 
+        background-position-x: right;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: start;
+    }
+     .text6{
+        align-self: center;
+     }
+    .text6 h2{
+        color: #233428;
+        font-size: 35px;
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .text6 p{
+        color: #233428;
+        font-size: 18px;
+        font-family: helvetica;
+        font-weight: 200;
+    }
+    .container7{
+        display: flex;
+        justify-content: space-between;
+        min-height: 180px;
+    }
+    .text7{
+        align-self: center;
+    }
+    .text7 h3{
+        color: #233428;
+        font-size: 28px;
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    .text7 p{
+        color: #233428;
+        font-size: 13px;
+        font-family: helvetica;
+    }
+    .forms{
+        align-self: center;
+        min-width: 35%;
+    }
+    .form{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sendEmail{
+        width: 100%;
+    }
+    .email{
+        width: 100%;
+        background-color: #f5f5f0;
+        border-radius: 40px;
+        border: none;
+        padding: 12px;
+        font-size: 12px;
+        font-family: "Gelasio";
+    }
+    .sum{
+        color: white;
+        background-color: #6A7773;
+        border-radius: 40px;
+        border: none;
+        padding: 12px;
+        font-family: "Gelasio";
+        position: absolute;
+        transition: all 1s;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        width: 30%;
+        height: 100%;
+        display: inline-block;
+        font-size: 12px;
+    }
+    .sum:hover{
+        background-color: #ffff80;
+        color:#233428  ;
+    }
+    #emailResult{
+        font-size: 12px;
+        font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+        color: #233428;
+        width: 100%;
+        padding: 10px;
+    }
+    .footer{
+        margin-top: 10px;
+        background-color:#6A7773 ;
+        min-height: 190px;
+     }
+    .container8{
+        display: flex ;
+        justify-content: space-between ;
+    }
+    
+    .g{
+        display: flex;
+        align-self: center ;
+        margin-top: 52px ;
+    }
+    .g img{
+        width: 28px ;
+        height: 30px ;
+    }
+    .g p{
+        font-size: 27px ;
+        font-family: "Gelasio" ;
+        font-weight:900 ;
+        color: white ;
+    }
+    .icon{
+        display: flex ;
+        flex-direction: column ;
+        min-width: 300px ;
+        margin-top: 62px ;
+    }
+    .fi{
+        margin: 0 ;
+        padding: 0 ;
+        text-align: center ;
+        list-style: none ;
+    }
+    .fi li{
+        display: inline-block ;
+        margin: 0 10px 0 15px ;
+        color: white ;
+        cursor: pointer;
+        font-size: 13px ;
+        transition: all 1s;
+    }
+    .fi li:hover{
+        text-decoration: underline;
+    }
+    .home{
+        margin: 0 ;
+        margin-right: -50px;
+        padding: 0 ;
+    }
+    hr{
+        width: 80% !important ;
+        border-top:  #4d4d33 !important;
+        margin: 18px 0px 10px 35px !important;
+        color: #4d4d33 !important ;
+        opacity: 0.8 !important;
+        border: revert !important;
+    }
+    .ic{
+        all: unset;
+        display: flex ;
+        align-self:flex-end ;
+        margin-right: 19px ;
+    }
+    .ic img{
+        width: 26px ;
+        height: 24px ;
+        margin: 0px 5px ;
+    }
+    .ic img:hover{
+        transform: translate(0 , -5px)  scale(1.3);
+    }
+
+ /* Responsive */
+
+ @media only screen and (max-width: 1156px){
+    h1{
+        font-size: 44px;
+    }
+
+    .firstText p{
+        font-size: 12px;
+    }
+    .blue{
+        width: 395px;
+        height: 372px;
+    }
+    .blue1{
+        width: 400px;
+        height: 418px;
+    }
+    .header .icons{
+        font-size: 12px;
+    }
+   .leftPictureText {
+    margin-left: 45px;
+    margin-bottom: 40px;
+    }
+    .leftPictureText p{
+        font-size: 14px;
+    }
+  
+}
+@media only screen and (max-width: 992px){
+    .header{
+        padding: 10px 25px;
+    }
+    .header .icons{
+        padding: 5px;
+        right: 57px;
+    }
+    .blue{
+        width: 308px;
+        height: 328px;
+        right: 60px;
+    }
+    .blue1{
+        width: 310px;
+        height: 368px;
+        right: 60px;
+    }
+    .firstText .shopb{
+        font-size: 13px;
+    }
+    .firstText p{
+        font-size: 11px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    .first{
+        min-height: 400px;
+    }  
+    .items h4{
+        font-size: 17px;
+        font-weight: bold;
+    }  
+    .items p{
+        font-size: 11px;
+        margin-top: 3px;
+    }
+    .leftPictureText p{
+        font-size: 12px;
+    }
+    .leftPictureText h3{
+        font-size: 27px;
+    }
+    .leftPictureText{
+        max-width: 84%;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    .shopPlants h2{
+        font-size: 27px;
+    }
+    .shopPlants p{
+        font-size: 14px;
+    }
+    .shopPlantsBtn {
+        font-size: 14px;
+    }
+} 
+
+
+@media only screen and (max-width: 812px){
+    .firstText p{
+        font-size: 10px;
+    }
+    h1{
+        font-size: 32px;
+    }
+    .blue{
+        width: 300px;
+        height: 328px;
+        right: 60px;
+    }
+    .blue1{
+        width: 302px;
+        height: 368px;
+        right: 60px;
+    }
+   .items h4{
+    font-size: 16px;
+   }
+
+}
+@media only screen and (max-width: 768px){
+    .text6 h2{
+        font-size: 25px;
+    }
+    .text6 p{
+        font-size: 13px;
+    }
+    .container6{
+        min-height: 200px;
+        background-position-x: -360px;
+    }
+     .text7 h3{
+        font-size: 22px;
+    }
+    .text7 p{
+        font-size: 12px;
+    }
+    .forms{
+        min-width: 44%;
+    } 
+    .footer{
+        min-height: 165px;
+    }
+    .g img {
+        width: 26px;
+        height: 27px;
+    }
+    .g p{
+        font-size: 22px;
+    }
+    .icon{
+        margin-top: 46px;
+    }
+    .fi li{
+        font-size: 10px;
+    }
+    
+    hr {
+    width: 71% !important;  
+    margin: 13px 0 10px 55px !important;
+    }
+    .ic{
+        margin-right: 30px;
+    }
+    .ic img {
+        width: 22px;
+        height: 20px;
+        margin: 0px 4px;
+    }
+}
+@media only screen and (max-width: 755px){
+    .blue{
+        width: 100%;
+        right: 0;
+    }
+    .blue1{
+        right: 0;
+        height: auto;
+    }
+    .header .shopb{
+        margin: 5px 0;
+    }
+    .header .icons{
+        right: 0;
+    }
+    .text2 h2{
+        font-size: 35px;
+    }
+    .text2 p{
+        font-size: 12px !important;
+    }
+    .leftPictureText h3 {
+        font-size: 25px;
+    }
+    .leftPictureText p{
+        font-size: 11px;
+    }
+    .firstPlant{
+        background-size: 1182px 212px;
+        min-height: 146px;
+    }
+    .secPlant{
+        background-size: 1182px 212px;
+        min-height: 146px; 
+    }
+    .thirdPlant{
+        background-size: 1182px 212px;
+        min-height: 146px;
+    }
+    .shopPlants h2{
+        margin-top: 32px;
+        font-size: 20px;
+    }
+    .shopPlants p{
+        font-size:12px; 
+        margin-bottom: 8px;
+    }
+    .shopPlantsBtn{
+        padding: 6px 20px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .blue1{
+        display: none;
+    }
+    .header .shopb{
+        margin: auto;
+    }
+    .firstText p{
+        font-size: 14px;
+    }
+     .first{
+        min-height: 340px;
+    } 
+    .leftPictureText{
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+    .leftPictureText h3{
+        font-size: 20px;
+    }
+    .leftPictureText p{
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 576px){
+    .header .menu{
+        display: none;
+    }
+    .firstText{
+        margin: auto 50px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .firstText p{
+        font-size: 12px;
+    }
+    .firstText .shopb{
+        font-size: 11px;
+    }
+    .text2 h2{
+        font-size: 28px;
+    }
+    .text2 p{
+        font-size: 11px !important;
+    }
+    .items img{
+        width: 143px;
+        margin: auto;
+    }
+    .items h4{
+        text-align: center;
+    }
+    .leftPictureText{
+        margin-left: 18px;
+        max-width: 70%;
+    }
+    .leftPictureText h3{
+        font-size: 14px;
+    }
+    .leftPictureText p{
+        font-size: 9px; 
+    }
+    #fourth{
+        margin-top: 60px;
+    }
+    .firstPlant{
+        background-size: 1182px 212px;
+        min-height: 108px;
+    }
+    .secPlant{
+        background-size: 1182px 212px;
+        min-height: 108px; 
+    }
+    .thirdPlant{
+        background-size: 1182px 212px;
+        min-height: 108px;
+    }
+    .shopPlants h2{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .shopPlants p{
+        font-size:10px; 
+        margin-bottom: 5px;
+    }
+    .shopPlantsBtn{
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    .text6 h2{
+        font-size: 20px;
+    }
+    .text6 p{
+        font-size: 11px;
+    }
+    .container6{
+        min-height: 120px;
+        background-position-x: -98px;
+    }
+    .container7{
+        min-height: 88px;
+        flex-direction: column;
+    }
+    .text7{
+        margin-top: 20px;
+        align-self: center;
+    }
+    .text7 h3{
+        font-size: 15px;
+    }
+    .text7 p{
+        font-size: 9px;
+    }
+    .email{
+        font-size: 9px;
+    }
+    .sum{
+        font-size: 9px;
+        padding: 7px;
+    }
+    .forms{
+        min-width: 38%;
+        align-self: unset;
+    }
+    .swiper-slide-prev{
+        opacity: 0.5;
+    }
+    .swiper-slide-next{
+        opacity: 0.5;
+    }
+    .text5 p{
+        font-size: 10px;
+        margin-top: -10px;
+    }
+    .text5 h2{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width : 425px){
+    .text6 h2{
+        font-size: 16px;
+    }
+    .text6 p{
+        font-size: 9px;
+    }
+    .container6{
+        min-height: 100px;
+    }
+    .swiper2{
+        border-bottom: 2px solid #163626;
+    }
+    .g img {
+        width: 22px;
+        height: 20px;
+    }
+    .g p {
+        font-size: 16px;
+    }
+    .fi li{
+        margin: 0px 4px;
+    }
+    hr {
+        width: 56% !important;
+        margin: 8px 0 8px 67px !important;
+    }
+    .ic {
+        margin-right: 65px;
+    }
+    .ic img {
+        width: 18px;
+        height: 18px;
+        margin: 0px 3px;
+    }
+}
+@media only screen and (max-width:375px){
+    .topVector{
+        top: 0;
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 577px) {
+    .menuBtn {
+        display: none;
+    }
+}

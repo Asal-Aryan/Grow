@@ -1,0 +1,1023 @@
+@font-face{
+    font-family: "Gelasio";
+    src:url(../font/Gelasio-Medium.woff)
+}
+@keyframes color{
+    0%{
+        color: #99e699;
+    }
+    25%{
+        color: #47d147;
+    }
+    50%{
+        color: #248f24;
+    }
+    75%{
+        color: #47d147;
+    }
+    100%{
+        color: #99e699;
+    }
+}
+@keyframes Heart{
+    0%{
+        font-size: 17px;
+    }
+    25%{
+        font-size: 18px;
+    }
+    50%{
+        font-size: 19px;
+    }
+    75%{
+        font-size: 18px;
+    }
+    100%{
+        font-size: 17px;
+    }
+}
+@keyframes title{
+    0%{
+        text-shadow: 0px 0px 25px #fff;
+    }
+    10%{
+        text-shadow: 0px 0px 20px #fff;
+    }
+    20%{
+        text-shadow: 0px 0px 15px #fff;
+    }
+    30%{
+        text-shadow: 0px 0px 10px #fff;
+    }
+    40%{
+        text-shadow: 0px 0px 5px #fff;
+    }
+    50%{
+        text-shadow: 0px 0px 0px #fff;
+    }
+    60%{
+        text-shadow: 0px 0px 5px #fff;
+    }
+    70%{
+        text-shadow: 0px 0px 10px #fff;
+    }
+    80%{
+        text-shadow: 0px 0px 15px #fff;
+    }
+    90%{
+        text-shadow: 0px 0px 20px #fff;
+    }
+    100%{
+        text-shadow: 0px 0px 25px #fff;
+    }
+}
+
+a{
+    color: unset;
+}
+html , body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #ebebe0;
+}
+.header{
+    max-height: 85px;
+}
+.menu1{
+    list-style: none;
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+}
+.menu1 li{
+    display: inline-block;
+    margin: 0 10px 0 15px;
+    font-size: 12px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.menu1 li:hover{
+    text-decoration: underline;
+}
+.icons{
+    font-size: 12px;
+    margin-top:8px;
+    text-align: -webkit-right;
+}
+.icons i{
+    padding: 10px;
+    transition: all 1s;
+}
+.icons i:hover{
+    color:#ffff80 !important;
+}
+
+/* ---------------------------------mobile menu---------------------------------- */
+.mobileMenu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    z-index: 50;
+    background-color: #ebebe0;
+    height: 100vh;
+    max-height: 97vh;
+    border: 15px solid #1e3527;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1;
+    /* display: none; */
+}
+
+.mobileMenu nav .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.mobileMenu nav .menu li {
+    margin: 20px 0px;
+    background-color:white;
+    color:#1e3527 ;
+    padding: 10px;
+    border-radius: 17px;
+    border: 2px solid #1e3527;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+}
+.menu a{
+    text-decoration: none;
+    color:#1e3527 ;
+}
+.mobileMenu .menu i{
+    color:#1e3527;
+    margin: auto;
+    opacity: 0.8;
+    padding: 7px;
+}
+
+.mobileMenu .menuClose {
+    background: none;
+    border: 0;
+    width: 40px;
+    font-size: 22px;
+    margin-right: auto;
+}
+.login{
+    padding: 5px;
+    border: 2px solid #1e3527;
+    border-radius: 20px;
+    transition: all 1s;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffff80;
+    color:#1e3527 ;
+}
+.login:hover{
+    background-color: #1e3527;   
+}
+.mobileMenu img{
+    align-self: center;
+    width: 74%;
+}
+/*  ----------------------------------------------------------------------------------- */
+.popup{
+    display: none;
+    justify-content: end;
+    position: relative;
+}
+.popupBox{
+   position: absolute;
+   z-index: 7;
+   background-color: #f5cc92;
+   opacity: 0.97;
+   border: 3px solid rgb(214, 26, 26);
+   font-size: 16px;
+   color:  rgb(214, 26, 26);
+   font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+   box-shadow: 10px 10px 10px #000000bf;
+   right: 0;
+}
+.popupBox a{
+    font-size: 16px;
+    color:  rgb(214, 26, 26);
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+} 
+.popupBox p{
+    margin: auto;
+    padding: 23px;
+}
+.theart{
+    font-size: 16px;
+    color:rgb(214, 26, 26) ;
+}
+.giftPopup{
+    display: none;
+    align-items: start;
+}
+.giftPopupBox{
+    color: #106c2e;
+    background-color: #d3e8d5;
+    border: 3px solid #106c2e;
+    position: absolute;
+    z-index: 7;
+    opacity: 0.97;
+    font-size: 16px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 10px 10px 10px #000000bf;
+    left: 250px;
+    top: 50px;
+}
+.giftPopupBox p{
+    margin: auto;
+    padding: 23px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------------------search part------------------------------------- */
+.search-part{
+    position: absolute;
+    margin: auto;
+    width: 90%;
+    z-index: 10;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+    top: 42px;
+    right: 5%;
+    padding: 15px;
+    box-shadow: 0px 0px 10px #106c2e , 0px 0px 10px #106c2e inset;
+}
+.search-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 18px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color: #163626;
+    border-radius: 20px;
+    transition: all 1s;
+    border: unset;
+}
+#search{
+    background-color: unset;
+    border: unset;
+    width: 80%;
+}
+#searchBtn{
+    background-color: unset;
+    border: unset;
+}
+#searchBtn:hover{
+    transform: translate(0 , -5px)  scale(1.3);
+    color: #f5cc92;
+}
+#result-box{
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.result-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.result-part a{
+    font-family: helvetica;
+    font-size: 18px;
+    color: #163626;
+    text-decoration: none;
+}
+#search-result{
+    font-family: helvetica;
+    font-size: 18px;
+}
+.result-part i{
+    color: #51916B;
+}
+/*-------------------------outdoor plants---------------------------*/
+.img-cont{
+    background-image: url(../img/outdoor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    text-align: center;
+}
+
+/* ------------------------indoor plants----------------------------- */
+.ofirst{
+    height: 450px;
+    border-top: 2px solid #233428;
+    border-bottom: 2px solid #233428;
+}
+.oimg-cont{
+    background-image: url(../img/indoor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 450px;
+}
+
+.otext1 h2{
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    animation: title 2s infinite;
+    color: white;
+    font-size: 50px;
+    line-height: 1.6;
+}
+.otext2{
+    display: flex;
+    justify-content: center;
+    font-family: "Gelasio" ,Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+}
+.otext2 h4{
+    line-height: 1.5;
+    font-size: 20px;
+    color: #233428;
+    text-shadow: 0px 0px 10px#51916B;
+}
+.newest , .all{
+    margin: 20px;
+}
+.newest h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    animation: color 2s infinite;
+}
+.all h2{
+    text-align: center;
+    text-shadow: 0px 0px 20px #fff;
+    font-size: 50px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color: #163626;
+}
+.newPosts{
+    border: 2px solid #163626;
+}
+.newPost{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.postPic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.postPic img{
+    width: 100%;
+    border-radius: 8px;
+}
+.newPostInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.newPostName h4{
+    color: #233428;
+    font-size: 18px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.newPostName p{
+    color: #233428;
+    opacity: 0.8;
+    font-size: 15px;
+    font-family: helvecita;
+    font-weight: 400;
+}
+.newPostBuy{
+    display: flex;
+    justify-content: space-between;
+}
+.newPostPrice{
+    font-size: 16px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #233428;
+    text-decoration: underline;
+}
+.buy i{
+    color: #cb8a76;
+    transition: all 1s;
+    cursor: pointer;
+}
+.buy i:hover{
+    color: #248f24;
+    transform: translate(0 , -5px)  scale(1.3);
+}
+.wrapper{
+    height: 350px;
+}
+.swiper-pagination-bullet-active{
+    background-color: #cb8a76;
+}
+.allPosts{
+    border: 2px solid #163626;
+}
+
+
+/* ---------------------------plants care---------------------------- */
+.pc1{
+    background-image: url(../img/cats.png);
+    width: 100%;
+    height: 364px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+.pcText1 h2{
+    font-size: 50px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color: #233428;
+}
+.pcG{
+    color: #51916B;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+}
+.pcText1 p{
+    color:#994d00;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+.pcText1 i{
+    color: #51916B !important;
+}
+.pc2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.ten{
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    color: #51916B;
+    background-color: antiquewhite;
+}
+.ten h3{
+    margin-top: 20px;
+}
+.advices{
+    display: flex;
+    flex-direction: column;
+    background-color: #cb8a76;
+}
+.advice{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid antiquewhite;
+}
+.topic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    color: wheat;
+}
+.topic h4{
+    margin: auto;
+}
+.topic i{
+    margin: auto;
+}
+.ih4{
+    display: inline-flex;
+}
+.advice p{
+    background-color: antiquewhite;
+    transition: all 1s;
+    padding: 10px;
+    border-radius: 20px;
+}
+.paragraph1 , .paragraph2 , .paragraph3 , .paragraph4 , .paragraph5 , .paragraph6 , .paragraph7 , .paragraph8 , .paragraph9 , .paragraph10{
+    display: none;
+}
+/* -----------------------------About Us---------------------------- */
+.au1{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    border-top: 1px solid #163626;
+    border-bottom: 1px solid #163626;
+    
+}
+.left1{
+    width: 50%;
+    align-self: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.left1 h2{
+   font-weight: bold;
+   color:#929336 ;
+   font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+}
+.left1 p{
+    font-family: helvetica;
+    color:#163626 ;
+}
+.right1{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.right1 img{
+    width: 80%;
+}
+.au2{
+    position: relative;
+}
+.swiper {
+    margin: 50px auto;
+    width: 80%;
+}
+.introCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+}
+.introTitle{
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    width: 80%;
+    margin: 20px 0;
+    text-align: center;
+    color: #163626;
+    font-size: 50px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+.introTitle h2{
+    margin-bottom: 20px;
+}
+.introText{
+    width: 75%;
+    font-family: helvetica;
+    color: #233428;
+}
+.introText p{
+    padding: 10px;
+}
+.yellow{
+    background-color:#fedd7e ;
+}
+.green{
+    background-color: #929336;;
+}
+.orange{
+    background-color: #eba044;;
+}
+.au3{
+    display: flex;
+    flex-direction: column;
+    height: 185px;
+    border-top: 2px solid #163626;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+}
+.contact h3{
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    margin: 15px;
+    color: #163626;
+    margin-top: 20px;
+}
+.tell{
+    display: flex;
+    align-items: baseline;
+    font-family: helvetica;
+    color: #233428;
+    opacity: 0.9;
+    border-bottom: 1px solid #233428;
+    margin: 30px ;
+    transition: all 1s;
+}
+.tell i{
+    animation: Heart 1s infinite;
+}
+.tell i:hover{
+    color: #ffff80;
+}
+/*-------------------------dashboard--------------------------------*/
+
+.dash1{
+    display: flex;
+    flex-direction: column;
+    font-family: "Gelasio";
+    border: 2px solid  #730099;
+    background-image: url(../img/b2.jpg);
+    background-size: contain;
+}
+.dtext1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-top: 50px;
+}
+.dtext1 h2{
+    color: #730099;
+    padding: 10px;
+    font-size: 40px;
+}
+.inform{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid  #ff1a75;
+}
+#mainPFP{
+    width: 200px;
+    height: 200px;
+    background-color: #ffe6e6;
+    position: absolute;
+    top: -100px;
+    right: 5%;
+    border-radius: 50%;
+    border: 2px solid  #ff1a75;
+    z-index: 2;
+}
+.information{
+    margin: 120px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.information h4{
+    background-color: rgb(255 230 230 / 80%);
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid  #730099;
+    margin: 12px 0px;
+}
+.information span{
+    color: #ff1a75;
+    font-family: helvetica;
+}
+.logout{
+    width: 100%;
+    background-color: #ff1a1a;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0px;
+    transition: all 1s;
+    border: 1px solid wheat;
+}
+.logout a{
+    text-decoration: none;
+}
+.logout:hover{
+    background-color: #bb1818;
+}
+/* ----------------------------------------------------------------- */
+.container6{
+    background-image: url(../img/CTA.png);
+    background-size: cover;
+    min-height: 255px;
+    width: 100%; 
+    background-position-x: right;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: start;
+}
+ .text6{
+    align-self: center;
+ }
+.text6 h2{
+    color: #233428;
+    font-size: 35px;
+    font-family: "Gelasio" , Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.text6 p{
+    color: #233428;
+    font-size: 18px;
+    font-family: helvetica;
+    font-weight: 200;
+}
+.footer{
+    background-color:#6A7773 ;
+    min-height: 190px;
+ }
+.container8{
+    display: flex ;
+    justify-content: space-between ;
+}
+
+.g{
+    display: flex;
+    align-self: center ;
+    margin-top: 52px ;
+}
+.g img{
+    width: 28px ;
+    height: 30px ;
+}
+.g p{
+    font-size: 27px ;
+    font-family: "Gelasio" ;
+    font-weight:900 ;
+    color: white ;
+}
+.icon{
+    display: flex ;
+    flex-direction: column ;
+    min-width: 300px ;
+    margin-top: 62px ;
+}
+.fi{
+    margin: 0 ;
+    padding: 0 ;
+    text-align: center ;
+    list-style: none ;
+}
+.fi li{
+    display: inline-block ;
+    margin: 0 10px 0 15px ;
+    color: white ;
+    font-size: 13px ;
+    cursor: pointer;
+    transition: all 1s;
+}
+.fi li:hover{
+    text-decoration: underline;
+}
+.home{
+    margin: 0 ;
+    margin-right: -50px;
+    padding: 0 ;
+}
+hr{
+    width: 80% !important ;
+    border-top:  #4d4d33 !important;
+    margin: 18px 0px 10px 35px !important;
+    color: #4d4d33 !important ;
+    opacity: 0.8 !important;
+    border: revert !important;
+}
+.ic{
+    all: unset;
+    display: flex ;
+    align-self:flex-end ;
+    margin-right: 19px ;
+}
+.ic img{
+    width: 26px ;
+    height: 24px ;
+    margin: 0px 5px ;
+}
+.ic img:hover{
+    transform: translate(0 , -5px)  scale(1.3);
+}
+/* -----------------------reponsive------------------------- */
+@media only screen and (max-width:992px){
+    .firstText h2{
+        font-size: 42px;
+    }
+    .ofirstText h2{
+        font-size: 42px;
+    }
+}
+@media only screen and (max-width:767px){
+    .otext1 h2{
+        font-size: 40px;
+    }
+    .otext2 h4{
+        font-size: 16px;
+    }
+    .pcText1 h2{
+     font-size: 36px;
+    }
+
+    .pcText1 p{
+     font-size: 15px;
+    }
+    .text6 h2{
+        font-size: 25px;
+    }
+    .text6 p{
+        font-size: 13px;
+    }
+    .container6{
+        min-height: 200px;
+        background-position-x: -360px;
+    }
+    .footer{
+        min-height: 165px;
+    }
+    .g img {
+        width: 26px;
+        height: 27px;
+    }
+    .g p{
+        font-size: 22px;
+    }
+    .icon{
+        margin-top: 46px;
+    }
+    .fi li{
+        font-size: 10px;
+    }
+    hr {
+    width: 71% !important;  
+    margin: 13px 0 10px 55px !important;
+    }
+    .ic{
+        margin-right: 30px;
+    }
+    .ic img {
+        width: 22px;
+        height: 20px;
+        margin: 0px 4px;
+    }
+    .left1 h2{
+        font-size: 20px;
+    }
+    .left1 p{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .menu1{
+        display: none;
+    }
+    .ofirst{
+        height: 300px;
+    }
+    .oimg-cont{
+        height: 300px;
+    }
+    .img-cont{
+        height: 300px;
+    }
+    .otext1 h2{
+        font-size: 30px;
+    }
+    .otext2 h4{
+        font-size: 14px;
+    }
+   
+    .pcText1 h2{
+        font-size: 36px;
+    }
+    .pc1{
+        background-image: url(../img/cats1.png);
+        height: 200px;
+    }
+    .pcText1 p{
+        font-size: 13px;
+    }
+    .text6 h2{
+        font-size: 20px;
+    }
+    .text6 p{
+        font-size: 11px;
+    }
+    .container6{
+        min-height: 120px;
+        background-position-x: -98px;
+    }
+    .g img {
+        width: 22px;
+        height: 20px;
+    }
+    .g p {
+        font-size: 16px;
+    }
+    .fi li{
+        margin: 0px 4px;
+    }
+    hr {
+        width: 56% !important;
+        margin: 8px 0 8px 67px !important;
+    }
+    .ic {
+        margin-right: 65px;
+    }
+    .ic img {
+        width: 18px;
+        height: 18px;
+        margin: 0px 3px;
+    }
+    .topic h4 , .advice p{
+        font-size: 14px;
+    }
+    .ten h3{
+        font-size: 20px;
+    }
+    .left1 h2{
+        font-size: 16px;
+    }
+    .left1 p{
+        font-size: 12px;
+    }
+    #mainPFP{
+        width: 150px;
+        height: 150px;
+        top: -75px;
+        right: 35%;
+    }
+    .dtext1 h2{
+        font-size: 30px;
+    }
+    .information h4{
+        font-size: 14px;
+    }
+     .swiper-slide-prev{
+        opacity: 0.5;
+    }
+    .swiper-slide-next{
+        opacity: 0.5;
+    }
+
+} 
+@media only screen and (max-width : 425px){
+    .pcText1 h2{
+        font-size: 26px;
+    }
+    .pcText1 p{
+        font-size: 9px;
+    }
+    .text6 h2{
+        font-size: 16px;
+    }
+    .text6 p{
+        font-size: 9px;
+    }
+    .container6{
+        min-height: 100px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .au3{
+        height: 250px;
+    }
+    #mainPFP{
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        right: 35%;
+    }
+    .dtext1 h2{
+        font-size: 18px;
+    }
+    .information h4{
+        font-size: 12px;
+    }
+    .information {
+        margin: 70px 10px;
+    }
+    .logout{
+        height: 35px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    .dtext1{
+        height: 80px;
+        margin-top: 40px;
+    }
+    .otext2 h4{
+        font-size: 12px;
+    }
+    .newest h2{
+        font-size: 38px;
+    }
+    .all h2{
+        font-size: 30px;
+    }
+}       
+@media only screen and (min-width: 577px) {
+    .menuBtn {
+        display: none;
+    }
+}
